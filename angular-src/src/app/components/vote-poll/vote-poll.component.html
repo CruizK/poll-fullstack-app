@@ -1,0 +1,27 @@
+<div *ngIf="poll">
+  <div class="row justify-content-center pt-3">
+    <div class="col-6 text-center">
+      <h4>{{poll.title}}</h4>
+    </div>
+  </div>
+
+  <div class="row justify-content-center pt-3">
+    <div class="col-6">
+      <div class="card">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item" *ngFor="let option of poll.options" (click)="onListItemClicked(option.id)">
+            <p class="h5">{{option.name}}</p>
+            <h4 class="right-button" *ngIf="selectedId == option.id"><i class="fa fa-check" aria-hidden="true"></i></h4>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="selectedId != undefined" class="row justify-content-center pt-4">
+    <div class="col-6">
+      <button (click)="onSubmitVote()" class="btn btn-primary right-button">Submit!</button>
+    </div>
+  </div>
+</div>
+<div *ngIf="!poll">Loading...</div>

@@ -1,0 +1,34 @@
+<div class="row justify-content-center pt-3">
+  <div class="col-6 text-center">
+    <input type="text" class="form-control form-control-lg" placeholder="Title" [(ngModel)]="title">
+  </div>
+</div>
+
+<div class="row justify-content-center pt-3">
+  <div class="col-6">
+    <input type="text" class="form-control" [(ngModel)]="newOption.name" placeholder="Enter Option" (keyup.enter)="onAddOption()">
+  </div>
+</div>
+
+<div *ngIf="options.length > 0" class="row justify-content-center pt-3">
+  <div class="col-6">
+    <div class="card">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item" *ngFor="let option of options">
+          <p class="h5">{{option.name}}</p>
+          <button (click)="onDeleteOption(option.id)"class="btn btn-danger btn-md right-button"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="options.length > 0">
+  <div *ngIf="title.length > 0" class="row justify-content-center pt-4">
+    <div class="col-6">
+      <button (click)="onSubmitPoll()"class="btn btn-primary right-button">Submit!</button>
+    </div>
+  </div>
+</div>
+
+

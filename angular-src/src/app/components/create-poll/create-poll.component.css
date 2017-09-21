@@ -1,0 +1,9 @@
+.right-button {
+  display: flex;
+  margin-left: auto;
+}
+
+.list-group-item {
+  word-wrap: break-word;
+  white-space: normal;
+}

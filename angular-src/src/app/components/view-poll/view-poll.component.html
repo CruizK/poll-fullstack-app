@@ -1,0 +1,12 @@
+<div *ngIf="poll" class="row justify-content-center pt-3">
+  <div class="col-6">
+    <div class="card">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item" *ngFor="let option of poll.options">
+          <p class="h5">{{option.name}}</p>
+          <p class="h6 right-button">Votes: {{option.votes}}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
