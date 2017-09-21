@@ -1,0 +1,23 @@
+{
+  "name": "poll-app",
+  "version": "1.0.0",
+  "description": "A simple poll app with the mean stack",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "start-db": "mongod"
+  },
+  "author": "Cruiz Kusman",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "*",
+    "cors": "*",
+    "express": "*",
+    "mongoose": "*",
+    "randomstring": "*",
+    "socket.io": "^2.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
